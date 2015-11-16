@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ require 'faker'
+ 
+  5.times do
+   User.create!(
+     email:   Faker::Internet.email,
+     password: Faker::Internet.password
+   )
+ end
+ 
+ users = User.all
+ 
+  5.times do 
+      RegisteredApplication.create!(
+      name: Faker::Name.name,
+      url:  Faker::Internet.url
+  )
+  end
+  
+  registered_applications = RegisteredApplication.all
