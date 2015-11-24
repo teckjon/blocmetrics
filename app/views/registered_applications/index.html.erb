@@ -7,7 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Url</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -16,9 +16,8 @@
       <tr>
         <td><%= registered_application.name %></td>
         <td><%= registered_application.url %></td>
-        <td><%= link_to 'Show', registered_application %></td>
-        <td><%= link_to 'Edit', edit_registered_application_path(registered_application) %></td>
-        <td><%= link_to 'Destroy', registered_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_registered_application_path(registered_application), class: 'btn btn-info' %></td>
+        <td><%= link_to 'Destroy', registered_application, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
